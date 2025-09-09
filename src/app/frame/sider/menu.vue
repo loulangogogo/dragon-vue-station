@@ -5,7 +5,7 @@
     :unique-opened="true" 
     :collapse="collapsed"
     menu-trigger="click" 
-    background-color="#545c64"
+    background-color="#232324"
     text-color="#fff"
     active-text-color="#ffd04b">
     <menu-visible :menus="menus"></menu-visible>
