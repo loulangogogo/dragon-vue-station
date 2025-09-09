@@ -1,0 +1,16 @@
+<template>
+    <d-icon>
+        <svg t="1757302525680" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="75977">
+            <path
+                d="M512 512c141.4 0 256-114.6 256-256S653.4 0 512 0 256 114.6 256 256s114.6 256 256 256z m179.2 64h-33.4c-44.4 20.4-93.8 32-145.8 32s-101.2-11.6-145.8-32h-33.4C184.4 576 64 696.4 64 844.8V928c0 53 43 96 96 96h704c53 0 96-43 96-96v-83.2c0-148.4-120.4-268.8-268.8-268.8z"
+                p-id="75978"></path>
+        </svg>
+    </d-icon>
+</template>
+
+<script lang="ts" setup>
+import dIcon from './d-icon.vue';
+</script>
+
+<style scoped lang="scss"></style>
