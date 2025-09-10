@@ -2,6 +2,8 @@
   <el-menu ref="menuRef"
     class="menuClass" 
     mode="vertical" 
+    :default-active="activeIndex"
+    router
     :unique-opened="true" 
     :collapse="collapsed"
     menu-trigger="click" 
@@ -29,6 +31,9 @@ const menus = computed((): Array<Menu> => {
   return arrayTool.arrayToTree(store.menus, "id", "pid", -1)!;
 });
 
+// 菜单选中
+const activeIndex = ref(route.path);
+
 /**
  * 监听路由的变化然后改变选中菜单
  * @param
@@ -38,7 +43,7 @@ const menus = computed((): Array<Menu> => {
 watch(() => route.path,
   (val: any) => {
       nextTick(() => {
-        menuRef.value.updateActiveIndex(val);
+        activeIndex.value = val;
       });
   },
   {

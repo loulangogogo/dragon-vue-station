@@ -38,6 +38,7 @@ const frameContentHeight = computed(() => store.frameContentHeight);
 }
 
 .contentDiv {
+  margin: 0 5px;
   background-color: rgb(255, 255, 255);
   height: v-bind(frameContentHeight+'px');
   overflow: auto;

@@ -7,6 +7,7 @@ import router from '../router/index';
 // ui组件
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 // 图标
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -16,6 +17,6 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 
 app.use(createPinia())
     .use(router)
-    .use(ElementPlus)
+    .use(ElementPlus,{locale: zhCn})
     .mount('#app');
 
