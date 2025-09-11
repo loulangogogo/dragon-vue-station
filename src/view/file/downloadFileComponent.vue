@@ -25,10 +25,9 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, reactive, ref } from "vue";
+import { inject, onMounted, reactive, ref } from "vue";
 import { type ResponseResult, ResponseStatusEnum } from "../../common/domain/response";
 import { FileGenerateStatusEnum, StatusEnum } from "../../common/domain/enums";
-import { generateFilePageList } from "../../common/api/system/generateFile";
 import { core as coreTool } from "owner-tool-js";
 import { DragonMessage } from "../../common/domain/component";
 import { downloadByUrl, download, multipartDownload } from "../../common/tool/fileTool";
@@ -108,6 +107,16 @@ const queryParam = reactive({
 const loading = ref(true);
 
 /**
+* 分页查询生成文件的数据
+* @param   
+* @return  
+* @author  :loulan
+* */
+const pageDownloadFileList:Function = inject("pageDownloadFileList", () => {
+  DragonMessage.error("未注入【pageDownloadFileList】");
+})
+
+/**
  * 分页查询数据
  * @param
  * @return
@@ -116,7 +125,7 @@ const loading = ref(true);
 const pageList = async () => {
   // 查询之前进入加载状态
   loading.value = true;
-  const res: ResponseResult = await generateFilePageList(queryParam);
+  const res: ResponseResult = await pageDownloadFileList(queryParam);
   if (res.status === ResponseStatusEnum.OK) {
     const data = res.data;
     tableData.value = data.records;
