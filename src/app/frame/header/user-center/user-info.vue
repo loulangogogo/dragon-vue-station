@@ -13,15 +13,17 @@
         </el-col>
         <el-col :span="19">
           <table class="tableContent">
-            <tr class="tableContentTr">
-              <th><span class="spanContentTitle">用户名：</span></th>
-              <td><span class="spanContent">{{ coreTool.isEmpty(userInfo.username) ? "无" : userInfo.username }}</span>
-              </td>
-            </tr>
-            <tr class="tableContentTr">
-              <th><span class="spanContentTitle">姓名：</span></th>
-              <td><span class="spanContent">{{ coreTool.isEmpty(userInfo.name) ? "无" : userInfo.name }}</span></td>
-            </tr>
+            <tbody>
+              <tr class="tableContentTr">
+                <th><span class="spanContentTitle">用户名：</span></th>
+                <td><span class="spanContent">{{ coreTool.isEmpty(userInfo.username) ? "无" : userInfo.username }}</span>
+                </td>
+              </tr>
+              <tr class="tableContentTr">
+                <th><span class="spanContentTitle">姓名：</span></th>
+                <td><span class="spanContent">{{ coreTool.isEmpty(userInfo.name) ? "无" : userInfo.name }}</span></td>
+              </tr>
+            </tbody>
           </table>
         </el-col>
       </el-row>
