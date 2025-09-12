@@ -191,6 +191,16 @@ export const getRoleByStationId = (stationId: number) => {
 }
 
 /**
+ * 根据当前站点ID获取角色信息
+ * @param   
+ * @return  Promise<any> 返回角色信息的Promise对象
+ * @author  :loulan
+ * */
+export const getRoleByCurrentStation = () => {
+    return ask.get(`${import.meta.env.VITE_REQUEST_SYSTEM_PRE}/role/getByCurrentStationId`);
+}
+
+/**
  * 通过客户端获取角色数据，10是客户端资源关联类型
  * @param
  * @return
