@@ -8,7 +8,7 @@ import type {pageQuery} from "../../domain/common";
  * @author     :loulan
  * */
 export const pageLogList = <T extends pageQuery>(query: T) => {
-    return ask.post(`${import.meta.env.VITE_REQUEST_HANDLER_PRE}/log/pageList`, query);
+    return ask.post(`${import.meta.env.VITE_REQUEST_LOGGER_PRE}/log/pageList`, query);
 }
 
 /**
@@ -18,5 +18,5 @@ export const pageLogList = <T extends pageQuery>(query: T) => {
  * @author     :loulan
  * */
 export const addFunIdea = (data:any) => {
-    return ask.put(`${import.meta.env.VITE_REQUEST_HANDLER_PRE}/log/add-fun-idea`, data);
+    return ask.put(`${import.meta.env.VITE_REQUEST_LOGGER_PRE}/log/add-fun-idea`, data);
 }

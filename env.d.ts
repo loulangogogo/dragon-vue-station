@@ -26,5 +26,6 @@ interface ImportMetaEnv {
   readonly VITE_REQUEST_AUTH_PRE: string;
   readonly VITE_REQUEST_SYSTEM_PRE: string;
   readonly VITE_REQUEST_HANDLER_PRE: string;
+  readonly VITE_REQUEST_LOGGER_PRE: string;
   readonly VITE_APP_URL: string;
 }
